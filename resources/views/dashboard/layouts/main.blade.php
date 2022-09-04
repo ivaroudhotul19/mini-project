@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="{{ asset("assets/css/sb-admin-2-min.css") }}">
     <link rel="stylesheet" href="{{ url("https://use.fontawesome.com/releases/v5.5.0/css/all.css") }}">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link rel="shortcut icon" href="{{ asset("images/LOGO.png") }}" type="image/x-icon" width="100%>
+    <link rel="shortcut icon" href="{{ asset("images/LOGO.png") }}" type="image/x-icon" width="100%"/>
+    @yield('alert-css')
 </head>
 <body>
     @include('sweetalert::alert') 
@@ -30,6 +31,7 @@
     <script src="{{ asset("assets/vendors/simple-datatables/simple-datatables.js") }}"></script>
     <script src="{{ asset("assets/js/vendors.js") }}"></script>
     <script src="{{ asset("assets/js/main.js") }}"></script>
-    <script src="{{ asset("assets/js/pages/dashboard.js") }}"></script>  
+    <script src="{{ asset("assets/js/pages/dashboard.js") }}"></script> 
+    @yield('alert') 
 </body>
 </html>

@@ -58,7 +58,7 @@
                                     <form action="/dashboard/nilai/{{ $nilai->id }}" method="post" id="btn-delete" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button class="btn btn-danger icon" data-toggle="tooltip" title='Delete'>
+                                        <button class="btn btn-danger icon show_confirm" data-toggle="tooltip" title='Delete'>
                                             <i class="fas fa-trash"></i>
                                         </button>        
                                     </form>

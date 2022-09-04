@@ -90,27 +90,6 @@
                                                 </div>
                                             @enderror
                                     </div>
-                                    <div class="form-group mb-3">
-                                        <div class="col-lg-6 col-md-12">
-                                            <label for="image">Foto</label>
-                                            <div class="form-file">
-                                                <label class="form-file-label" for="image"></label>
-                                                @if($mahasiswa->image)
-                                                    <img class="img-preview img-fluid mb-3 col-sm-5 d-block" src="{{ asset('storage/'.$mahasiswa->image) }}">
-                                                @else
-                                                    <img class="img-preview img-fluid mb-3 col-sm-5">
-                                                @endif
-                                                <input type="file" name="image" id="image" 
-                                                class="form-file-input @error('image') is-invalid @enderror"
-                                                onchange="previewImage()">
-                                                @error ('image')
-                                                <div class="invalid-feedback">
-                                                   {{ $message }}
-                                                </div>
-                                                @enderror
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group mb-3">
@@ -156,6 +135,27 @@
                                                     {{ $message }}
                                                 </div>
                                             @enderror
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <div class="col-lg-6 col-md-12">
+                                            <label for="image">Foto</label>
+                                            <div class="form-file">
+                                                <label class="form-file-label" for="image"></label>
+                                                @if($mahasiswa->image)
+                                                    <img class="img-preview img-fluid mb-3 col-sm-5 d-block" src="{{ asset('storage/'.$mahasiswa->image) }}">
+                                                @else
+                                                    <img class="img-preview img-fluid mb-3 col-sm-5">
+                                                @endif
+                                                <input type="file" name="image" id="image" 
+                                                class="form-file-input @error('image') is-invalid @enderror"
+                                                onchange="previewImage()">
+                                                @error ('image')
+                                                <div class="invalid-feedback">
+                                                   {{ $message }}
+                                                </div>
+                                                @enderror
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
